@@ -2,9 +2,10 @@ import './App.css';
 import React, {useState} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Layout from './layout/Layout';
+import Layout from './component/layout/Layout';
 import HomePage from './component/pages/HomePage';
 import TodoPage from './component/pages/TodoPage';
+import ContactPage from './component/pages/ContactPage';
 
 function App() {
   const [todos, setTodos] = useState ([
@@ -12,11 +13,10 @@ function App() {
     {id: 2, text: 'Build a Todo', completed: 'Completed' },
     {id: 3, text: 'Submit Assignment', completed: 'Completed' }
   ]);
+
   return (
-    <h1>Task Management Project</h1>
-  );
-  return (
-    <BrowserRouter>
+    <>
+     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<HomePage />} />
@@ -25,7 +25,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+     </>
+  ); 
 }
 
 export default App;

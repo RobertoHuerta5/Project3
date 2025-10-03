@@ -7,7 +7,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
 
-function BasicExample() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -22,9 +21,5 @@ function BasicExample() {
       </Container>
     </Navbar>
   );
-}
 
-  return (
-    <div>Header</div>
-  )
 }
