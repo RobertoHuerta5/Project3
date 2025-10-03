@@ -9,6 +9,17 @@ function App() {
   return (
     <h1>Task Management Project</h1>
   );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="home" element={<HomePage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="student" element={<StudentPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
