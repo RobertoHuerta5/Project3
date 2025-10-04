@@ -9,9 +9,9 @@ import ContactPage from './component/pages/ContactPage';
 
 function App() {
   const [todos, setTodos] = useState ([
-    {id: 1, text: 'Learn React', status: 'Not completed', completed: 'Completed'},
-    {id: 2, text: 'Build a Todo', status: 'Not completed', completed: 'Completed'},
-    {id: 3, text: 'Submit Assignment',status: 'Not completed', completed: 'Completed'}
+    {id: 1, task: 'Learn React', status: 'Not completed', completed: 'Completed'},
+    {id: 2, task: 'Build a Todo', status: 'Not completed', completed: 'Completed'},
+    {id: 3, task: 'Submit Assignment',status: 'Not completed', completed: 'Completed'}
   ]);
 
   return (

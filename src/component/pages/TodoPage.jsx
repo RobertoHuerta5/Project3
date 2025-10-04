@@ -24,9 +24,16 @@ export default function TodoPage({todos,setTodos}) {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              
-            </tr>
+
+              {todos.map((todo, index)=>(
+              <tr>
+                <td>{index+1}</td>
+                <td>{todo.task}</td>
+                <td>{todo.status}</td>
+
+              </tr>
+              ))}
+
           </tbody>
         </Table>
 
