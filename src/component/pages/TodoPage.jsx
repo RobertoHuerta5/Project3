@@ -1,32 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import AddNewTask from '../tasks/AddNewTask';
 
 export default function TodoPage({todos,setTodos}) {
+
  
   function handleDelete (event, todoID){
     const result = todos.filter(todo=>todo.id!== todoID)
-    setTodos (result)
-    
+    setTodos (result)  
   }
 
-  function newToDo(event){
-
-  }
-
-  function addNewToDo(){
-
-  }
   return (
     <>
       <h1>To Do List</h1>
-
-      <label>Add New Task:
-          <input type="text" name="taskName" onChange={newToDo} ></input>
-       </label><br/>
-
-        <button onClick={addNewToDo} >SUBMIT</button>
-        
+      <AddNewTask/>
           <Table responsive>
           <thead>
             <tr>
