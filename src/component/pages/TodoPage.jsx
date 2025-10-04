@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import Table from 'react-bootstrap/Table';
 
-export default function TodoPage({todo,setTodos}) {
+export default function TodoPage({todos,setTodos}) {
+  console.log(todos)
 
   function newToDo(event){
 
@@ -11,9 +13,24 @@ export default function TodoPage({todo,setTodos}) {
   }
   return (
     <>
-      <h1>Add New Task</h1>
+      <h1>To Do List</h1>
+          <Table responsive>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Task</th>
+              <th>Status</th>
+              <th>Completed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+            </tr>
+          </tbody>
+        </Table>
 
-        <label>Taks To Do:
+        <label>Add New Task:
           <input type="text" name="taskName" onChange={newToDo} ></input>
         </label><br/>
 
