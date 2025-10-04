@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 export default function TodoPage({todos,setTodos}) {
   console.log(todos)
@@ -20,6 +21,7 @@ export default function TodoPage({todos,setTodos}) {
               <th>Number</th>
               <th>Task</th>
               <th>Status</th>
+              <th>Action</th>
               <th>Completed</th>
             </tr>
           </thead>
@@ -30,7 +32,8 @@ export default function TodoPage({todos,setTodos}) {
                 <td>{index+1}</td>
                 <td>{todo.task}</td>
                 <td>{todo.status}</td>
-
+                <td><Button variant="danger">Danger</Button></td>
+                
               </tr>
               ))}
 
