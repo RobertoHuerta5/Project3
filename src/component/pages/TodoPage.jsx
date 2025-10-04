@@ -3,7 +3,12 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
 export default function TodoPage({todos,setTodos}) {
-  console.log(todos)
+ 
+  function handleDelete (event, todoID){
+    const result = todos.filter(todo=>todo.id!== todoID)
+    setTodos (result)
+    
+  }
 
   function newToDo(event){
 
@@ -15,6 +20,13 @@ export default function TodoPage({todos,setTodos}) {
   return (
     <>
       <h1>To Do List</h1>
+
+      <label>Add New Task:
+          <input type="text" name="taskName" onChange={newToDo} ></input>
+       </label><br/>
+
+        <button onClick={addNewToDo} >SUBMIT</button>
+        
           <Table responsive>
           <thead>
             <tr>
@@ -28,11 +40,11 @@ export default function TodoPage({todos,setTodos}) {
           <tbody>
 
               {todos.map((todo, index)=>(
-              <tr>
+              <tr key= {index}>
                 <td>{index+1}</td>
                 <td>{todo.task}</td>
                 <td>{todo.status}</td>
-                <td><Button variant="danger">Danger</Button></td>
+                <td><Button variant="danger" name= "buttonDelete" onClick={(event)=>handleDelete(event, todo.id)}>Delete</Button></td>
                 
               </tr>
               ))}
@@ -40,11 +52,7 @@ export default function TodoPage({todos,setTodos}) {
           </tbody>
         </Table>
 
-        <label>Add New Task:
-          <input type="text" name="taskName" onChange={newToDo} ></input>
-        </label><br/>
-
-        <button onClick={addNewToDo} >SUBMIT</button>
+       
     </>
    
   )
