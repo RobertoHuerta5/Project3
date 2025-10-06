@@ -14,7 +14,7 @@ export default function TodoPage({todos,setTodos}) {
   return (
     <>
       <h1>To Do List</h1>
-      <AddNewTask/>
+      <AddNewTask todos={todos} setTodos= {setTodos}/>
           <Table responsive>
           <thead>
             <tr>

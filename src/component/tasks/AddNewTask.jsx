@@ -1,11 +1,22 @@
 import React, { useState } from 'react'
 
-export default function AddNewTask() {
+export default function AddNewTask({todos, setTodos}) {
 
-    const [newTask, setNewTask] = useState("")
+    const [newTask, setNewTask] = useState({
+        id: "",
+        task: "",
+        status: "Not Completed",
+        completed: ""
+    })
 
-    function addNewToDo (){
+    function handleChange (event) {
+        const{name, value } = event.target 
+        setNewTask ({...newTask, [name]:value})
+    }
 
+    function addNewTask (){
+        console.log(newTask)
+        setTodos([...todos, newTask])
     }
 
 
@@ -13,10 +24,10 @@ export default function AddNewTask() {
   return (
     <>
         <label>Add New Task:
-        <input type="text" name="taskName" onChange={(event)=>(setNewTask(event.target.value))} ></input>
+        <input type="text" name="task" onChange={handleChange} ></input>
         </label><br/>
 
-        <button onClick={addNewToDo} >SUBMIT</button>
+        <button onClick={addNewTask} >ADD</button>
 
     </>
    
