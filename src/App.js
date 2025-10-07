@@ -1,7 +1,7 @@
-import './App.css';
 import React, {useState} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 import HomePage from './component/pages/HomePage';
 import TodoPage from './component/pages/TodoPage';
 import ContactPage from './component/pages/ContactPage';

@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.mainTitle{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.footer{
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.contactForm{
+  text-align: center;
+}
+
+.contactForm label{
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contactForm button {
+  background-color: black;
+  color: white;  
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem; 
+}
+
