@@ -23,11 +23,14 @@ export default function AddNewTask({todos, setTodos}) {
 
   return (
     <>
-        <label>Add New Task:
-        <input type="text" name="task" onChange={handleChange} ></input>
-        </label><br/>
+        <div className="todoForm">
+            <label>Add New Task:
+            <input type="text" name="task" onChange={handleChange} ></input>
+            </label><br/>
 
-        <button onClick={addNewTask} >ADD</button>
+            <button onClick={addNewTask} >ADD</button>
+        </div>
+        
 
     </>
    

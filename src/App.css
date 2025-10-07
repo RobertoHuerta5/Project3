@@ -51,12 +51,18 @@
 
 .contactForm{
   text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgb(249, 250, 251);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contactForm label{
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  
 }
 
 .contactForm button {
@@ -67,3 +73,23 @@
   font-size: 1rem; 
 }
 
+.todoForm{
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.todoForm button {
+  background-color: black;
+  color: white;  
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem; 
+}
+
+.todoForm label{
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
