@@ -11,6 +11,19 @@ export default function TodoPage({todos,setTodos}) {
     setTodos (result)  
   }
 
+  function handleUpdate (event, todoID){
+    const updatedToDos = todos.map(todo => {
+      if (todo.id === todoID){
+        return {
+          ...todo,
+          status: todo.status === 'Not completed' ? 'Completed' : 'Not Completed'
+        };
+      }
+      return todo;
+    })
+    setTodos(updatedToDos);
+  }
+
   return (
     <>
       <h1>To Do List</h1>
@@ -22,7 +35,7 @@ export default function TodoPage({todos,setTodos}) {
               <th>Task</th>
               <th>Status</th>
               <th>Action</th>
-              <th>Completed</th>
+              <th>Update</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +46,7 @@ export default function TodoPage({todos,setTodos}) {
                 <td>{todo.task}</td>
                 <td>{todo.status}</td>
                 <td><Button variant="danger" name= "buttonDelete" onClick={(event)=>handleDelete(event, todo.id)}>Delete</Button></td>
+                <td><Button variant="success" name= "buttonUpdate" onClick={(event)=>handleUpdate(event, todo.id)}>Complete</Button></td>
                 
               </tr>
               ))}
