@@ -19,9 +19,9 @@ function App() {
      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="home" element={<HomePage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="todo" element={<TodoPage todos={todos} setTodos={setTodos} />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/todo" element={<TodoPage todos={todos} setTodos={setTodos} />} />
         </Route>
       </Routes>
     </BrowserRouter>
