@@ -7,11 +7,14 @@
   pointer-events: none;
 }
 
+.contactPage{
+  background-color: rgba(46, 134, 192, 0.262);
+}
 
 
 .mainTitle{
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -25,7 +28,6 @@
   text-align: center;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: rgb(249, 250, 251);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
