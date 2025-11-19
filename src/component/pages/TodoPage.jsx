@@ -26,35 +26,36 @@ export default function TodoPage({todos,setTodos}) {
 
   return (
     <>
-      <h1 className="mainTitle">To Do List</h1>
-      <AddNewTask todos={todos} setTodos= {setTodos}/>
-          <Table responsive>
-          <thead>
-            <tr>
-              <th>Number</th>
-              <th>Task</th>
-              <th>Status</th>
-              <th>Action</th>
-              <th>Update</th>
-            </tr>
-          </thead>
-          <tbody>
-
-              {todos.map((todo, index)=>(
-              <tr key= {index}>
-                <td>{index+1}</td>
-                <td>{todo.task}</td>
-                <td>{todo.status}</td>
-                <td><Button variant="danger" name= "buttonDelete" onClick={(event)=>handleDelete(event, todo.id)}>Delete</Button></td>
-                <td><Button variant="success" name= "buttonUpdate" onClick={(event)=>handleUpdate(event, todo.id)}>Complete</Button></td>
-                
+      <div className="todoPage">
+        <h1 className="mainTitle">To Do List</h1>
+        <AddNewTask todos={todos} setTodos= {setTodos}/>
+            <Table responsive>
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th>Update</th>
               </tr>
-              ))}
+            </thead>
+            <tbody>
 
-          </tbody>
-        </Table>
+                {todos.map((todo, index)=>(
+                <tr key= {index}>
+                  <td>{index+1}</td>
+                  <td>{todo.task}</td>
+                  <td>{todo.status}</td>
+                  <td><Button variant="danger" name= "buttonDelete" onClick={(event)=>handleDelete(event, todo.id)}>Delete</Button></td>
+                  <td><Button variant="success" name= "buttonUpdate" onClick={(event)=>handleUpdate(event, todo.id)}>Complete</Button></td>
+                  
+                </tr>
+                ))}
 
-       
+            </tbody>
+          </Table>
+
+       </div>  
     </>
    
   )
