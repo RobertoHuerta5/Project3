@@ -18,15 +18,15 @@ function App() {
   return (
     <>
       <Header />
-     <BrowserRouter>
-        <Routes>
-          <Route >
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/todo" element={<TodoPage todos={todos} setTodos={setTodos} />} />
-          </Route>
-        </Routes>
+      <BrowserRouter>
+          <Routes>
+            <Route >
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/todo" element={<TodoPage todos={todos} setTodos={setTodos} />} />
+            </Route>
+          </Routes>
       </BrowserRouter>
       <Footer/>
     </>
