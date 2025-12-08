@@ -16,7 +16,7 @@ export default function TodoPage({todos,setTodos}) {
       if (todo.id === todoID){
         return {
           ...todo,
-          status: todo.status === 'Not completed' ? 'Completed' : 'Not Completed'
+          status: todo.status === 'Not Completed' ? 'Completed' : 'Not Completed'
         };
       }
       return todo;
@@ -43,7 +43,7 @@ export default function TodoPage({todos,setTodos}) {
                 <tbody>
 
                     {todos.map((todo, index)=>(
-                    <tr key= {index}>
+                    <tr key= {todo.id}>
                       <td>{index+1}</td>
                       <td>{todo.task}</td>
                       <td>{todo.status}</td>
