@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       <div className="homePage">
-        <h1 className="homePageTitle">Welcome to Task Management</h1>
+        <h1>Welcome to Task Management</h1>
       </div>
     </>
    

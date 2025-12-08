@@ -9,17 +9,31 @@
 }
 
 .homePage{
-  background-color: rgb(122, 110, 98); 
-  height: 100vh; 
-  
+  background: linear-gradient(to bottom, rgb(122, 110, 98), rgb(189, 184, 184));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
 }
 
-.homePageTitle{
-  text-align: center;
-  font-size: 5rem;
-  font-weight: bolder;
-  font-family: "Playfair Display", serif !important;
+
+.homePage h1{
+  color: #333;
+  font-size: 6rem;
+  position: relative;
 }
+
+.homePage h1::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: rgb(102, 97, 97);
+  display: block;
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+}
+
 
 .mainTitle{
   text-align: center;
