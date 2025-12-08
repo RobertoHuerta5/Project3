@@ -1,17 +1,23 @@
 .contactPage{
-  background-color: rgb(141, 197, 235); 
+  background-color: rgb(23, 26, 29); 
   height: 100vh; 
 }
 
 .todoPage{
-  background-color: rgb(141, 197, 235); 
+  background-color: rgb(110, 120, 129); 
   height: 100vh; 
 }
 
 .homePage{
-  background-color: rgb(141, 197, 235); 
+  background-color: rgb(94, 101, 106); 
   height: 100vh; 
   
+}
+
+.homePageTitle{
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 .mainTitle{
@@ -27,7 +33,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(247, 248, 248);
+  background-color: rgb(255, 255, 255);
 }
 
 .contactForm{
